@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="taskService" class="kpicourier.com.service.TaskServiceImpl" >
+        <property name="taskDao" ref="taskDao" />
+    </bean>
+    <bean id="taskDao" class="kpicourier.com.dao.TaskDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="kpicourier.com.model.Task" table="tasks">
+        <id name="taskid" type="int">
+            <column name="taskid"/>
+            <generator class="identity"/>
+        </id>
+        <property name="clientId" type="int">
+            <column name="client" />
+        </property>
+        <property name="executorId" type="int">
+            <column name="executor"/>
+        </property>
+        <property name="amount" type="double">
+            <column name="amount"/>
+        </property>
+        <property name="status" type="int">
+            <column name="status"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description"/>
+        </property>
+    </class>
+</hibernate-mapping>

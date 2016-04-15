@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="courierService" class="kpicourier.com.service.CourierServiceImpl" >
+        <property name="courierDao" ref="courierDao" />
+    </bean>
+
+    <bean id="courierDao" class="kpicourier.com.dao.CourierDaoImpl" >
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+</beans>

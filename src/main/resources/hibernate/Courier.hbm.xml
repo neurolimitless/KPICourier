@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="kpicourier.com.model.Courier" table="couriers">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="32"/>
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" length="64"/>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="32"/>
+        </property>
+        <property name="card" type="string">
+            <column name="card" length="64"/>
+        </property>
+        <property name="totalPoints" type="int">
+            <column name="totalPoints"/>
+        </property>
+        <property name="averagePoints" type="int">
+            <column name="average_points"/>
+        </property>
+        <property name="valid" type="int">
+            <column name="valid"/>
+        </property>
+    </class>
+</hibernate-mapping>
